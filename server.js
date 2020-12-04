@@ -13,8 +13,8 @@ app.use(express.urlencoded({ extended: true }));
 app.use(express.json());
 app.use(express.static("public"));
 
-require("./routes/HTMLroutes.js")(app)
-require("./routes/APIroutes.js")(app)
+require("./routes/htmlRoutes.js")(app)
+require("./routes/apiRoutes.js")(app)
 
 mongoose.connect(process.env.MONGODB_URI || "mongodb://localhost/workout", { useNewUrlParser: true });
 
